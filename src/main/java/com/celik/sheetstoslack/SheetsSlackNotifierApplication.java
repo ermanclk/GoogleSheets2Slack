@@ -1,17 +1,16 @@
-package com.crossover.sheetstoslack;
+package com.celik.sheetstoslack;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
-
-import java.io.IOException;
-import java.security.GeneralSecurityException;
 
 @SpringBootApplication
 @EnableScheduling
+@EnableAsync
 public class SheetsSlackNotifierApplication {
 
-    public static void main(String[] args) throws IOException, GeneralSecurityException {
+    public static void main(String[] args) {
         SpringApplication.run(SheetsSlackNotifierApplication.class, args);
     }
 }

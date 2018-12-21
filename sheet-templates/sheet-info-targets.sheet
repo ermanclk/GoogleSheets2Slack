@@ -1,0 +1,13 @@
+sheetName=Targets
+sheetId=1MwRjw8RCrCGaP-ql-OALGuMCfDZvOYkgLR7MILlIcGU
+data.queryRange=TARGET!A3:T
+data.userName.index=0
+credential.queryRange=Users!A2:G
+credential.userName.index=1
+credential.email.index=6
+data.totalloc.index=5
+data.role.index=1
+data.targetweek1.index=6
+data.targetweek2.index=11
+data.triggerColumn.index=6,11
+messageTemplate=Target for {userName} with role {role} has changes,  target week 1 is :{targetweek1},  targetweek2 is : {targetweek2}.

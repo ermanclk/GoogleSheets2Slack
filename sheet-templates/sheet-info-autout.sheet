@@ -1,0 +1,13 @@
+sheetName=Auto Ut Tasks
+sheetId=1Ka1C1FsCPNnRjw5OunQHTeqt6wMOdzqndq5xX3olkbQ
+data.queryRange=TASKS!A2:P
+credential.queryRange=Credentials!A2:C
+data.prUrl.index=5
+data.userName.index=4
+data.status.index=9
+data.reviewer.index=13
+data.loc.index=10
+data.triggerColumn.index=9,10
+credential.userName.index=0
+credential.email.index=2
+messageTemplate=Task with prUrl: {prUrl} has changes,  loc is :{loc},  status is : {status}.
