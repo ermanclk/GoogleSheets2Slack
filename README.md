@@ -1,11 +1,11 @@
 **GoogleSheeets2SlackNotification Application**
 
-GoogleSheeets2SlackNotification application is an automation tool that checks cell updates on Google Sheets and provides information 
+GoogleSheeets2SlackNotification application is an automation tool that checks cell updates on Google Sheets and sends notification 
 messages to users by slack channels.
 
 **Summary**
 
-This application tries to read sheets data from any Google Sheet and creates a notification messages
+This application fetchs sheets cell content from any Google Sheet and creates a notification messages
 to the related user/candidate by slack. 
 
 Application provides a faster notification system, faster feedbacks to/from clients, increases  awareness on processes 
@@ -15,7 +15,7 @@ which are followed by Google sheets.
 
 GoogleSheeets2SlackNotification is a spring boot application, which can be executed by command line by  simple **java -jar** command. 
 
-Application reads data from Google Sheets, so yo need to configure a google service account and also create credentials 
+Application reads data from Google Sheets, so yo need to configure a google service account and credentials 
 for that account, that provides  google sheets api authentication. 
 
 Slack web api is used for sending messages, which requires creating a Slack application and enabling 
@@ -23,7 +23,7 @@ slack application bot token. Bot tokens provide authentication and direct messag
 
 In installation folder, place application jar file, in same directory create folders /config and /sheet-templates 
 
-Directory structure should be like this :
+Directory structure:
 
 /app.jar
 
@@ -31,14 +31,13 @@ Directory structure should be like this :
 
 /sheet-templates/
 
-in config folder, place application.properties file.
+application.properties should be placed in config directory.
 tool scan interval and slack bot user token can be configured by this file.
 Default scan interval is 10 minutes, if not set. 
 
 sample application.properties file looks like this :
 
-`
-sheet.read.interval=*/10 * * * * *
+`sheet.read.interval=*/10 * * * * *
 slackAppBotUserToken=xoxb-505329468914-507165135362`
 
 use **sheet.read.interval** to set scan interval, use cron expression.
@@ -54,9 +53,6 @@ java -jar .\docs-slack-integration-0.0.1-SNAPSHOT.jar
 
 command to start web application. It runs on 8090 port, you can configure this by application.properties file.
  
-That's it. Your application will start working, but will not scan any sheet yet because we did not provide 
-any sheet config.
-
 **Sheets Configuration**
 
 we use **./sheet-templates/** folder to place sheet configuration files.
